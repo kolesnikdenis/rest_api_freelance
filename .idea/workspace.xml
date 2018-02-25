@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fcb06907-fed5-4257-abb6-4854865aa830" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/mail/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="e#3724#4115#0" expanded="false" />
+                <element signature="e#4151#4988#0" expanded="false" />
+                <element signature="e#5275#6785#0" expanded="false" />
+                <element signature="e#7777#7845#0" expanded="false" />
+                <element signature="e#7888#12440#0" expanded="false" />
+                <element signature="e#14410#17025#0" expanded="false" />
+                <element signature="e#17125#17650#0" expanded="false" />
+                <element signature="e#17696#20083#0" expanded="false" />
+                <element signature="e#20804#21376#0" expanded="false" />
+                <element signature="e#21571#22205#0" expanded="false" />
+                <element signature="e#22336#23074#0" expanded="false" />
+                <element signature="e#23157#23661#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_user_profile.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/show_user_profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#473#1401#0" expanded="false" />
+                <element signature="e#1934#2619#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth_refresh.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/auth_refresh.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="128" column="7" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="128" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="msg.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/msg.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="954">
+              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ads.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/ads.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/blog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding>
+                <element signature="e#6815#7046#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advanced_find.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/advanced_find.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/category.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!block;n#restruct#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fieldname</find>
+      <find>option</find>
+      <find>/save_list_img</find>
+      <find>post img list</find>
+      <find>index</find>
+      <find>validation</find>
+      <find>/validation</find>
+      <find>reset</find>
+      <find>/reset</find>
+      <find>/delete_file</find>
+      <find>update_token</find>
+      <find>test_auth</find>
+      <find>user</find>
+      <find>/user</find>
+      <find>* user</find>
+      <find>info</find>
+      <find>test</find>
+      <find>auth_token.test_auth</find>
+      <find>DELETE FRO</find>
+      <find>delete</find>
+      <find>rows</find>
+      <find>blog</find>
+      <find>add</find>
+      <find>_msg</find>
+      <find>/msg</find>
+      <find>ads</find>
+      <find>ads_last</find>
+      <find>user_profile_ex</find>
+      <find>msg</find>
+      <find>insert</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/views/json.ejs" />
+        <option value="$PROJECT_DIR$/config.json.js" />
+        <option value="$PROJECT_DIR$/routes/advanced_find.js" />
+        <option value="$PROJECT_DIR$/t.js" />
+        <option value="$PROJECT_DIR$/routes/reset_password.js" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/routes/img_list.js" />
+        <option value="$PROJECT_DIR$/routes/common.js" />
+        <option value="$PROJECT_DIR$/routes/account.js" />
+        <option value="$PROJECT_DIR$/routes/auth_refresh.js" />
+        <option value="$PROJECT_DIR$/routes/show_user_profile.js" />
+        <option value="$PROJECT_DIR$/routes/msg.js" />
+        <option value="$PROJECT_DIR$/routes/ads.js" />
+        <option value="$PROJECT_DIR$/routes/blog.js" />
+        <option value="$PROJECT_DIR$/routes/category.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="34" />
+    <option name="y" value="27" />
+    <option name="width" value="741" />
+    <option name="height" value="738" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kolesnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolesnik" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcb06907-fed5-4257-abb6-4854865aa830" name="Default" comment="" />
+      <created>1517851059875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517851059875</updated>
+      <workItem from="1517851068065" duration="824000" />
+      <workItem from="1517866684063" duration="7123000" />
+      <workItem from="1517874349957" duration="8000" />
+      <workItem from="1517876654214" duration="483000" />
+      <workItem from="1517950845845" duration="9589000" />
+      <workItem from="1518114920722" duration="834000" />
+      <workItem from="1518350834039" duration="1853000" />
+      <workItem from="1518383669271" duration="12258000" />
+      <workItem from="1518478314283" duration="3569000" />
+      <workItem from="1518487122223" duration="2137000" />
+      <workItem from="1518570397217" duration="25633000" />
+      <workItem from="1518722862568" duration="14188000" />
+      <workItem from="1518798469650" duration="2639000" />
+      <workItem from="1518801475852" duration="586000" />
+      <workItem from="1518814400260" duration="3590000" />
+      <workItem from="1518822308780" duration="149000" />
+      <workItem from="1518824154432" duration="636000" />
+      <workItem from="1518824841489" duration="1001000" />
+      <workItem from="1518870784803" duration="4315000" />
+      <workItem from="1518877674914" duration="51000" />
+      <workItem from="1518877759114" duration="48000" />
+      <workItem from="1518878123343" duration="1962000" />
+      <workItem from="1518885014479" duration="473000" />
+      <workItem from="1518885843973" duration="375000" />
+      <workItem from="1518886527556" duration="117000" />
+      <workItem from="1518953015401" duration="2166000" />
+      <workItem from="1518960801945" duration="260000" />
+      <workItem from="1518965569389" duration="1744000" />
+      <workItem from="1518982517600" duration="1617000" />
+      <workItem from="1518998009199" duration="3655000" />
+      <workItem from="1519133488812" duration="47000" />
+      <workItem from="1519240385279" duration="439000" />
+      <workItem from="1519242058074" duration="156000" />
+      <workItem from="1519243831529" duration="95000" />
+      <workItem from="1519244058943" duration="3603000" />
+      <workItem from="1519247714544" duration="961000" />
+      <workItem from="1519251154403" duration="517000" />
+      <workItem from="1519251717218" duration="121000" />
+      <workItem from="1519251853817" duration="185000" />
+      <workItem from="1519252431249" duration="132000" />
+      <workItem from="1519264820541" duration="733000" />
+      <workItem from="1519265611072" duration="408000" />
+      <workItem from="1519266145973" duration="270000" />
+      <workItem from="1519292318511" duration="173000" />
+      <workItem from="1519313213809" duration="12000" />
+      <workItem from="1519330188437" duration="498000" />
+      <workItem from="1519422943790" duration="505000" />
+      <workItem from="1519423532285" duration="57000" />
+      <workItem from="1519423765281" duration="721000" />
+      <workItem from="1519424553022" duration="321000" />
+      <workItem from="1519425006875" duration="32000" />
+      <workItem from="1519425518215" duration="152000" />
+      <workItem from="1519425691026" duration="102000" />
+      <workItem from="1519426080706" duration="24000" />
+      <workItem from="1519426627056" duration="112000" />
+      <workItem from="1519426895394" duration="71000" />
+      <workItem from="1519431738451" duration="118000" />
+      <workItem from="1519436881003" duration="88000" />
+      <workItem from="1519478505326" duration="133000" />
+      <workItem from="1519481051566" duration="54000" />
+      <workItem from="1519511815714" duration="277000" />
+      <workItem from="1519512974280" duration="62000" />
+      <workItem from="1519513106725" duration="1987000" />
+      <workItem from="1519515500309" duration="1417000" />
+      <workItem from="1519517629104" duration="74000" />
+      <workItem from="1519518202637" duration="805000" />
+      <workItem from="1519519148235" duration="885000" />
+      <workItem from="1519591380248" duration="5227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="129155000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="41" y="25" width="1325" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20641126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44723618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/BookController.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthorsListController.js" />
+    <entry file="file://$PROJECT_DIR$/app/services/utils.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/booksListController.js" />
+    <entry file="file://$PROJECT_DIR$/app/app.config.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/AuthorsListController.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/partials/header.html" />
+    <entry file="file://$PROJECT_DIR$/app/services/booksRepository.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/BookController.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthorsListController.js" />
+    <entry file="file://$PROJECT_DIR$/app/services/utils.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/booksList.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/book.html" />
+    <entry file="file://$PROJECT_DIR$/i.html" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/booksListController.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/AuthorsListController.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/main.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/partials/header.html" />
+    <entry file="file://$PROJECT_DIR$/app/services/booksRepository.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/BookController.js" />
+    <entry file="file://$PROJECT_DIR$/app/app.js" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthorsListController.js" />
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/app/services/utils.js" />
+    <entry file="file://$PROJECT_DIR$/app/app.config.js" />
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="113" column="38" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="38" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/json.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/json.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express-validator/lib/express_validator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="64" column="2" lean-forward="false" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/json.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/multer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="88" column="9" lean-forward="false" selection-start-line="88" selection-start-column="9" selection-end-line="88" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/img_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="66" column="3" lean-forward="false" selection-start-line="66" selection-start-column="3" selection-end-line="66" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/reset_password.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="53" column="6" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="53" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="24" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/auth_refresh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="128" column="7" lean-forward="false" selection-start-line="95" selection-start-column="4" selection-end-line="128" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/show_user_profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#473#1401#0" expanded="false" />
+            <element signature="e#1934#2619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/msg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/ads.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="e#6815#7046#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/advanced_find.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!block;n#restruct#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#3724#4115#0" expanded="false" />
+            <element signature="e#4151#4988#0" expanded="false" />
+            <element signature="e#5275#6785#0" expanded="false" />
+            <element signature="e#7777#7845#0" expanded="false" />
+            <element signature="e#7888#12440#0" expanded="false" />
+            <element signature="e#14410#17025#0" expanded="false" />
+            <element signature="e#17125#17650#0" expanded="false" />
+            <element signature="e#17696#20083#0" expanded="false" />
+            <element signature="e#20804#21376#0" expanded="false" />
+            <element signature="e#21571#22205#0" expanded="false" />
+            <element signature="e#22336#23074#0" expanded="false" />
+            <element signature="e#23157#23661#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

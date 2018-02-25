@@ -1,0 +1,5 @@
+{
+    "host_to_mail": "business.pp.ua",
+    "path_upload" : "../geo_freelancer/app/upload/",
+    "www_upload_img": "http://freelancer.kolesnikdenis.com/upload/"
+}
