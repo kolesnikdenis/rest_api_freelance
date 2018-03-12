@@ -503,23 +503,23 @@ var list_img = router.route("/save_list_img");
 list_img.all(work_img_list.all );
 list_img.post( work_img_list.save_img_list);
 
-var ads = router.route("/ads");
+var ads = router.route("/a_d_s");
 ads.all(ads_route_ex.all );
 ads.get( ads_route_ex.show_all);
 
-var ads_geo = router.route("/ads_geo");
+var ads_geo = router.route("/a_d_s_geo");
 ads_geo.all(ads_route_ex.all );
 ads_geo.post( ads_route_ex.show_geo_all);
 
-var ads_geo_last = router.route("/ads_last");
+var ads_geo_last = router.route("/a_d_s_last");
 ads_geo_last.all(ads_route_ex.all );
 ads_geo_last.get( ads_route_ex.ads_last);
 
-var ads_geo_last_ads = router.route("/ads_add");
+var ads_geo_last_ads = router.route("/a_d_s_add");
 ads_geo_last_ads.all(ads_route_ex.all );
 ads_geo_last_ads.post( ads_route_ex.ads_add);
 
-var ads_geo_last_ads_user = router.route("/ads_user/:id");
+var ads_geo_last_ads_user = router.route("/a_d_s_user/:id");
 ads_geo_last_ads_user.all(ads_route_ex.all );
 ads_geo_last_ads_user.get( ads_route_ex.ads_user);
 
