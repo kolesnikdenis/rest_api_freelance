@@ -5,7 +5,7 @@
   "private": true,
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.9.0",
+    "body-parser": "^1.18.2",
     "ejs": "^1.0.0",
     "express": "4.9.5",
     "express-myconnection": "*",
