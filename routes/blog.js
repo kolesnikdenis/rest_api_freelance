@@ -29,7 +29,7 @@ exports.del_blog_content = function (req,res,next) {
 exports.show_all = function (req,res,next) {
     var out={err:[]};
     req.getConnection(function(err,conn) {
-        var query = conn.query("SELECT * FROM `blog` ", function (err, rows) {
+        var query = conn.query("SELECT `blog`.*,`categories`.`name` as categories_name FROM `blog` LEFT JOIN categories on `blog`.`categories`=`categories`.`id` ", function (err, rows) {
             if (err) {
                 res.sendStatus(200).send(out);
             }
@@ -48,7 +48,7 @@ exports.show_all = function (req,res,next) {
 exports.show_blog_id = function (req,res, next) {
     var out={err:[]};
     req.getConnection(function(err,conn) {
-        var query = conn.query("SELECT * FROM `blog` where id=? ",[req.params.id], function (err, rows) {
+        var query = conn.query("SELECT `blog`.*,`categories`.`name` as categories_name FROM `blog` LEFT JOIN categories on`blog`.`categories`=`categories`.`id`  where `blog`.`id`=? ",[req.params.id], function (err, rows) {
             if (err) {
                 res.sendStatus(200).send(out);
             }
@@ -88,20 +88,44 @@ exports.show_category = function (req,res, next) {
 
 exports.show_user_blog = function (req,res, next) {
     var out={err:[]};
+
+    function read_comment_blog(conn,work_index,blog_id,count) {
+        return new Promise((resolve, reject) => {
+            var query = conn.query("SELECT count(*) as 'length' FROM blog_commnet where `blog_commnet`.`blog_id`= ? and `blog_commnet`.`user_id` = ? order by `blog_commnet`.`id` desc limit 1", [blog_id.blog_id,req.params.autor], function (err, rows) {
+                if (err) {
+                    res.sendStatus(200).send(out);
+                } else {
+                    out.blog_array[work_index]['length'] = rows[0].length;
+                    if ((work_index + 1) >= count)
+                        resolve({status: "ok", sql: query.sql, return_sql: rows[0].id, finish: 1});
+                    else
+                        resolve({status: "ok", sql: query.sql, return_sql: rows[0].id, finish: 0});
+                }
+                console.log(query)
+            });
+        });
+    }
     req.getConnection(function(err,conn) {
-        var query = conn.query("SELECT * FROM `blog` where autor=? ",[req.params.autor], function (err, rows) {
+        var query = conn.query("SELECT `blog`.*,`categories`.`name` as categories_name FROM `blog` LEFT JOIN categories on`blog`.`categories`=`categories`.`id` where autor=? ",[req.params.autor], function (err, rows) {
             if (err) {
                 console.log(err);
                 res.sendStatus(200).send(out);
             }
             if (rows.length < 1) {
                 out['err'].push("user did not write to blog" + err);
-                out['status'] = "err";
+                out['status'] = "ok";
                 res.send(out);
             } else {
                 out['status'] = "ok";
                 out['blog_array'] = rows;
-                res.send(out);
+                for ( var ii=0; ii<out.blog_array.length; ii++) {
+                    read_comment_blog(conn,ii,{ blog_id: out.blog_array[ii].id},out.blog_array.length).then(result => {
+                        if ( result.finish == 1 ){
+                            res.send(out)
+                        }
+                    });
+                };
+                //res.send(out);
             }
         })
     })
@@ -130,6 +154,71 @@ exports.show_blog_content = function (req,res, next) {
 };
 
 
+exports.blog_comment_save = function (req, res, next){
+    console.log("save comment: ",req.body);
+    var out={err:[]};
+    auth_token.test_auth(req,res,next).then(
+        result => {
+            console.log("msg result: ", result, "id:", result.id);
+            save_message(result.mail,result.token, result.id);
+        },
+        error => {
+            console.log(error);
+        }
+    );
+
+    var save_message = function (mail, token, id) {
+        req.getConnection(function (err, conn) {
+            if ( req.body.msg && req.body.blog_id ) {
+                var data_mysql = {
+                    user_id: id,
+                    blog_id: req.body.blog_id,
+                    msg: req.body.msg,
+                };
+                query = conn.query("INSERT INTO `blog_commnet`  set ?  ", data_mysql, function (err, rows1) {
+                    if (err) {
+                        console.log(err);
+                        out['user_profile'] = "";
+                        out['status'] = "err";
+                        out['err'].push("err, update user");
+                        res.send(out);
+                        next(out.msg);
+                    } else {
+                        out['status'] = "ok";
+                        //out[''] = update_data;
+                        res.send(out);
+                    }
+                });
+            }else {
+                out['status'] = "err";
+                out['err'].push("less attributes");
+                res.send(out);
+            }
+        })
+    }
+    
+};
+
+exports.blog_comment_get = function ( req, res, next){
+    console.log("update, params: ",req.params);
+    var out={err:[]};
+    req.getConnection(function(err,conn) {
+        query_sql("SELECT `blog_commnet`.*, `user`.`firstname`, `user`.`surname`,`user`.`photos` FROM `blog_commnet`  LEFT JOIN user on `blog_commnet`.`user_id`=`user`.`id`  WHERE blog_id = ?", [req.params.id], conn).then(
+            result => {
+                out['status']='ok';
+                out['comment_blog']= result;
+                res.send(out);
+            },
+            error => {
+                out['status']='err';
+                out['err'].push("error sql query");
+                console.log(out);
+                res.send(out);
+            }
+        );
+    });
+};
+
 exports.blog_to_add = function (req,res, next) {
     var out={err:[]};
     var data_mysql = {
@@ -139,63 +228,40 @@ exports.blog_to_add = function (req,res, next) {
         autor:  0,
         photos: [],
     };
-    if ( req.headers && req.headers.auth ) {
-        var json = JSON.parse(JSON.stringify(req.headers.auth));
-        json = JSON.parse(json);
-        if (json.username && json.token) {
-            console.log("ok auth");
-        } else {
-            res.status(401).send('err');
-        }
-    }
-    req.getConnection(function (err, conn) {
-        var from_day = auth_token.from_day();
-        if ( req.files && req.files.length >0 ){
-            for (var i in req.files) {
-                data_mysql.photos.push({filename: req.files[i].filename, alt:  req.files[i].originalname} );
-            }
-        };
-        var query = conn.query("SELECT user.*, arr_token.id as id_token FROM user,arr_token WHERE `mail` = ? and  arr_token.token=? and  ?  < arr_token.datetime ", [json.username,json.token,from_day], function (err, rows) {
-            if (err) {
-                console.log(err);
-                out['status'] = "err";
-                out['err'].push("SQL: find user in base error");
-                res.send(out);
-            } else {
-                console.log(rows);
-                if (rows[0] && rows[0].id) {
-                    data_mysql.title = req.body.title;
-                    data_mysql.content = req.body.content;
-                    data_mysql.categories = req.body.categories;
-                    data_mysql.autor = rows[0].id;
-                    data_mysql.photos = JSON.stringify(data_mysql.photos);
-                    //data_mysql.photos = data_mysql.photos;
-                    auth_token.update_token({date: from_day, id_user: data_mysql.autor}, conn);//upDATE TOKEN
-                    query = conn.query("INSERT INTO `web_freelancer`.`blog`  set ?  ", data_mysql, function (err, rows1) {
-                        if (err) {
-                            console.log(err);
-                            out['user_profile'] = "";
-                            out['status'] = "err";
-                            out['err'].push("err, update user");
-                            res.send(out);
-                            next(out.msg);
-                        } else {
-                            out['status'] = "ok";
-                            //out[''] = update_data;
-                            console.log(rows1);
-                            res.send(out);
-                        }
-                    });
-                }else {
-                    out['user_profile'] = "";
-                    out['status'] = "err";
-                    out['err'].push("user not auth..");
-                    res.send(out);
-                }
-            }
+    auth_token.test_auth(req,res,next).then(result => { console.log("msg: ", result); save_to_blog(result.mail,result.token,result.id);}, error => {console.log(error); });
+    var save_to_blog = function (mail, token, id) {
+        //console.log(req.body);
+        req.getConnection(function (err, conn) {
+            //var from_day = auth_token.from_day();
+            if (req.files && req.files.length > 0) {
+                for (var i in req.files) {
+                    data_mysql.photos.push({filename: req.files[i].filename, alt: req.files[i].originalname});
+                };
+            };
+                data_mysql.title = req.body.title;
+                data_mysql.content = req.body.content;
+                data_mysql.categories = req.body.categories;
+                data_mysql.autor = id;
+                data_mysql.photos = JSON.stringify(data_mysql.photos);
+                //data_mysql.photos = data_mysql.photos;
+                //auth_token.update_token( {date: from_day, id_user: data_mysql.autor}, conn);//upDATE TOKEN
+                query = conn.query("INSERT INTO `web_freelancer`.`blog`  set ?  ", data_mysql, function (err, rows1) {
+                    if (err) {
+                        console.log(err);
+                        out['user_profile'] = "";
+                        out['status'] = "err";
+                        out['err'].push("err, update user");
+                        res.send(out);
+                        next(out.msg);
+                    } else {
+                        out['status'] = "ok";
+                        //out[''] = update_data;
+                        res.send(out);
+                    }
+                });
         })
-    })
 
+    }
 }
 
 

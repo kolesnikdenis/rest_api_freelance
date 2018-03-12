@@ -28,8 +28,6 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 //app.use(allowCrossDomain);
 
-
-
 // Add headers
 app.use(function (req, res, next) {
 	app.disable( 'x-powered-by' );
@@ -299,15 +297,12 @@ registration.post(function(req,res,next){
                                     '<a target=new href="http://uwork.pp.ua/">GEO Freelance WebSite</a></i>'
                                 });
                                 //var filepath = './pengbrew_160x160.png';  // File to attach
-                                send({ // Overriding default parameters
-                                    subject: 'Validation mail from  '+config.host_to_mail,//filepath,         // Override value set as default
-                                    //  files: [ filepath ],
+                                send({
+                                    subject: 'Validation mail from  '+config.host_to_mail,
                                 }, function (err, res1) {
                                     out['status']="ok";
                                     out['send_mail']="ok";
-                                    //res.render('json',{data:JSON.stringify(out)});
 					                res.send(out);
-                                    console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
                                 });
                             }
                             //res.sendStatus(200);
@@ -332,7 +327,6 @@ var blog_router = router.route("/blog/");
 blog_router.all(blog.all);
 blog_router.get(blog.show_all);
 blog_router.delete(blog.del_blog_content);
-//blog_router.post(blog.update_blog);
 
 var show_blog_id = router.route("/show_blog_id/:id");
 show_blog_id.all(blog.all);
@@ -351,22 +345,33 @@ var work_msg=router.route("/msg_last");
 work_msg.all(msg.show_all);
 work_msg.get(msg.show_last_msg_to_user);
 
+var work_msg=router.route("/msg_user_message");
+work_msg.all(msg.show_all);
+work_msg.get(msg.show_last_msg_to_user);
+
+var msg_dialog=router.route("/msg_dialog/:id");
+msg_dialog.all(msg.show_all);
+msg_dialog.get(msg.show_dialog);
+
 var work_msg_all_cont=router.route("/msg_all_count");
 work_msg_all_cont.all(msg.show_all);
 work_msg_all_cont.get(msg.msg_all_count);
 
-var work_msg_all=router.route("/msg_show_all");
+var work_msg_all=router.route("/msg_unique_sender");
 work_msg_all.all(msg.show_all);
-work_msg_all.get(msg.show_all_msg);
+work_msg_all.get(msg.show_unique);
 
 var work_msg_all=router.route("/msg_send");
 work_msg_all.all(msg.show_all);
 work_msg_all.post(msg.msg_send);
 
+var msg_last_update = router.route("/msg_last_update/:id");
+msg_last_update.all(msg.show_all);
+msg_last_update.get(msg.msg_last_update);
+
 var update_blog_content = router.route("/blog_update_content");
 update_blog_content.get(blog.show_all);
 blog_router.post(blog.update_blog);
-
 var blog_category_router = router.route("/blog/:id");
 blog_category_router.all(blog.all);
 blog_category_router.get(blog.show_category);
@@ -380,10 +385,30 @@ blog_category_user_show_edit.post(blog.update_user_blog);
 var blog_add = router.route("/blog_add/");
 blog_add.all(blog.all);
 blog_add.post(upload1.array('files', 12),blog.blog_to_add);
-
+//02.03.18
+var blog_comment_save=router.route("/blog_comment");
+blog_comment_save.all(blog.all);
+blog_comment_save.post(blog.blog_comment_save);
+var blog_comment_get=router.route("/blog_comment/:id");
+blog_comment_get.all(blog.all);
+blog_comment_get.get(blog.blog_comment_get);
 
 var account = router.route("/account/");
 account.all(function(req,res,next){
+    console.log(req.method, req.url);
+    if ( req.method == 'OPTIONS') {
+        if ( req.headers && req.headers.auth ) {
+            //console.log( "headers.auth.auth:", req.headers.auth);
+            var json = JSON.parse(req.headers.auth);
+            console.log("auth:", json);
+            if (json.username && json.token) {
+                console.log("ok auth");
+            } else {
+                console.log("status 401")
+                res.status(401).send('err');
+            }
+        }
+    }
     next();
 });
 account.post(function(req,res,next) {
@@ -420,6 +445,8 @@ account.post(function(req,res,next) {
                                     console.log('add new token');
                                 }
                             });
+                            console.log(rows);
+                            console.log(query1.sql);
 
 
                             res.send(out);
@@ -449,6 +476,7 @@ account.post(function(req,res,next) {
 
 
 var account_update = router.route("/account/update");
+/*
 account_update.all(function(req,res,next){
     console.log(req.method, req.url);
     if ( req.method == 'OPTIONS') {
@@ -467,62 +495,9 @@ account_update.all(function(req,res,next){
     }
     next();
 });
-account_update.post(function(req,res,next) {
-    var out = {err: [],};
-    console.log("body:",req.body);
-
-    auth_token.test_auth(req,res,next).then(result => { update_info_user(result.mail,result.token);}, error => {console.log(error); });
-    var out={err:[]};
-
-    res.status(200);
-    update_info_user= function(mail, token) {
-                out['status'] = "ok";
-                var update_data = {
-                    address: req.body.address,
-                    apartment: req.body.apartment,
-                    city: req.body.city,
-                    description: req.body.description,
-                    firstname: req.body.firstname,
-                    geo: req.body.geo,
-                    house: req.body.house,
-                    patronymic: req.body.patronymic,
-                    phone: req.body.phone,
-                    photos: (req.body.photos?req.body.photos:"[]"),
-                    surname: req.body.surname,
-                };
-                if (req.body.password) {
-                    console.log("update + password");
-                    query_set("UPDATE user set password  = PASSWORD('" + req.body.password + "'),  ? WHERE   `mail` = ? and `token` = ? ")
-                } else {
-                    console.log("update + didn't password");
-                    query_set("UPDATE user set ? WHERE `mail` = ? ")
-                }
-                function query_set(query_in) {
-                    console.log(query_in);
-                    req.getConnection(function(err,conn) {
-                        query = conn.query(query_in, [update_data, mail, token], function (err, rows) {
-                            if (err) {
-                                out['user_profile'] = "";
-                                out['status'] = "err";
-                                out['err'].push("err, update user");
-                                res.send(out);
-                                next(out.msg);
-                                //return next("Mysql error, check your query");
-                            } else {
-                                out['status'] = "ok";
-                                out['user_profile'] = update_data;
-                                console.log(out);
-                                res.send(out);
-                            }
-                        })
-                        console.log(query.sql);
-                    })
-                }
-
-
-
-    }
-})
+*/
+account_update.all(account_ex.all);
+account_update.post(account_ex.update_info)
 
 var list_img = router.route("/save_list_img");
 list_img.all(work_img_list.all );
@@ -540,6 +515,13 @@ var ads_geo_last = router.route("/ads_last");
 ads_geo_last.all(ads_route_ex.all );
 ads_geo_last.get( ads_route_ex.ads_last);
 
+var ads_geo_last_ads = router.route("/ads_add");
+ads_geo_last_ads.all(ads_route_ex.all );
+ads_geo_last_ads.post( ads_route_ex.ads_add);
+
+var ads_geo_last_ads_user = router.route("/ads_user/:id");
+ads_geo_last_ads_user.all(ads_route_ex.all );
+ads_geo_last_ads_user.get( ads_route_ex.ads_user);
 
 var user_profile_router = router.route("/get_user_profile/:id");
 user_profile_router.all( user_profile_ex.all );
